@@ -6,9 +6,9 @@ public class Animal {
     private boolean canSwim;
 
     public Animal(String speciesName, boolean hopper, boolean swimmer) {
-        species = speciesName;
-        canHop = hopper;
-        canSwim = swimmer;
+        this.species = speciesName;
+        this.canHop = hopper;
+        this.canSwim = swimmer;
     }
 
     public boolean canHop() {
