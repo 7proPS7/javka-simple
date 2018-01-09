@@ -1,7 +1,8 @@
 package car.analizer.util.innerclass.anonymous;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class SaleTest {
     private final int BASE_PRICE = 20;
@@ -9,13 +10,13 @@ class SaleTest {
     @Test
     void checkAdmissionValue() {
         Sale sale = new Sale();
-        Assertions.assertEquals(10, sale.admission(BASE_PRICE));
+        assertThat(10).isEqualTo(sale.admission(BASE_PRICE));
     }
 
     @Test
     void checkPayMethodCorrectness() {
         Sale sale = new Sale();
-        Assertions.assertEquals(15, sale.pay(BASE_PRICE));
+        assertThat(15).isEqualTo(sale.pay(BASE_PRICE));
     }
 
 }

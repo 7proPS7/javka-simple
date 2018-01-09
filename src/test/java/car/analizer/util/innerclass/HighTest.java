@@ -1,7 +1,8 @@
 package car.analizer.util.innerclass;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HighTest {
 
@@ -15,11 +16,9 @@ class HighTest {
         High.Medium medium = high.new Medium();
         High.Medium.Low low = medium.new Low();
 
-        Assertions.assertEquals(HIGH, low.getHighValue());
-        Assertions.assertEquals(MEDIUM, low.getMediumValue());
-        Assertions.assertEquals(LOW, low.getLowValue());
-        Assertions.assertEquals(LOW, low.getLowValueAndUseThis());
+        assertThat(HIGH).isEqualTo(low.getHighValue());
+        assertThat(MEDIUM).isEqualTo(low.getMediumValue());
+        assertThat(LOW).isEqualTo(low.getLowValue());
+        assertThat(LOW).isEqualTo(low.getLowValueAndUseThis());
     }
-
-
 }
