@@ -1,7 +1,8 @@
 package car.analizer.util.innerclass.privinterface;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class ExampleOfPrivInterfaceTest {
 
@@ -10,6 +11,6 @@ class ExampleOfPrivInterfaceTest {
         ExampleOfPrivInterface exampleOfPrivInterface = new ExampleOfPrivInterface();
         ExampleOfPrivInterface.DontTell dontTell = exampleOfPrivInterface.new DontTell();
 
-        Assertions.assertEquals("LIVE", dontTell.live());
+        assertThat("LIVE").isEqualTo(dontTell.live());
     }
 }
