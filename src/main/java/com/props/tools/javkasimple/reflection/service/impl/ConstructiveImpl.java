@@ -23,6 +23,9 @@ public class ConstructiveImpl implements Constructive {
 
     @Override
     public AccessType getConstructorAccess(Constructor constructor) {
-        return null;
+        int modifierVal = constructor.getModifiers();
+        log.info(String.valueOf(modifierVal));
+
+        return AccessType.valueOf(modifierVal);
     }
 }
