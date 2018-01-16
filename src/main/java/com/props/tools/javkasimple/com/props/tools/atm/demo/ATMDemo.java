@@ -12,7 +12,6 @@ public class ATMDemo {
         ATMGlobalChain globalChain = new ATMGlobalChain();
         ATMGlobalChainController controller = new ATMGlobalChainController(globalChain);
 
-
         controller.init(540);
         log.info("===============================");
         controller.init(5);
