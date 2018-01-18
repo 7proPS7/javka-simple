@@ -1,14 +1,17 @@
 package com.props.tools.javkasimple.com.props.tools.atm.handler;
 
+import com.props.tools.javkasimple.com.props.tools.atm.constant.ConstantNumber;
+import com.props.tools.javkasimple.com.props.tools.atm.helper.HandlerHelper;
 import com.props.tools.javkasimple.com.props.tools.atm.service.DispenseChain;
 import com.props.tools.javkasimple.com.props.tools.atm.util.Currency;
-import com.props.tools.javkasimple.com.props.tools.atm.util.HandlerCalculator;
-
-import static com.props.tools.javkasimple.com.props.tools.atm.constant.ConstantNumber.FIFTY;
 
 public class FiftyZlotyHandler implements DispenseChain {
     private DispenseChain dispenseChain;
-    private HandlerCalculator handlerCalculator;
+    private final HandlerHelper handlerHelper;
+
+    public FiftyZlotyHandler(final ConstantNumber number) {
+        this.handlerHelper = new HandlerHelper(number.getValue());
+    }
 
     @Override
     public void setNextChain(DispenseChain nextChain) {
@@ -17,14 +20,9 @@ public class FiftyZlotyHandler implements DispenseChain {
 
     @Override
     public void dispense(Currency currency) {
-        final int quantity = currency.getQuantity();
-        handlerCalculator = new HandlerCalculator(quantity, FIFTY.getValue());
-        if (handlerCalculator.isQuantityGreaterOrEquals()) {
-            handlerCalculator.showDispensingMessage();
-
-            int remainder = handlerCalculator.remainder();
-            if (remainder != 0)
-                this.dispenseChain.dispense(new Currency(remainder));
+        int quantity = currency.getQuantity();
+        if (handlerHelper.isDispensedEnd(quantity)) {
+            this.dispenseChain.dispense(new Currency(handlerHelper.remainder(quantity)));
         }
         this.dispenseChain.dispense(currency);
     }

@@ -15,11 +15,11 @@ public class ATMGlobalChainController {
 
     public void init(int quantity) {
         if (isPossibleToDispense(quantity)) {
-            atmGlobalChain.getFiveHundred().dispense(new Currency(quantity));
+            atmGlobalChain.getAllChain().dispense(new Currency(quantity));
         }
     }
 
-    private boolean isPossibleToDispense(final int quantity) {
+    private boolean isPossibleToDispense(int quantity) {
         if (quantity % 10 != 0) {
             log.info("Amount should be in multiple of 10s.");
             return false;
