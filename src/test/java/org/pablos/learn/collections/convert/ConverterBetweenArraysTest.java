@@ -1,4 +1,4 @@
-package org.pablos.learn.collections;
+package org.pablos.learn.collections.convert;
 
 import org.junit.Before;
 import org.junit.Test;

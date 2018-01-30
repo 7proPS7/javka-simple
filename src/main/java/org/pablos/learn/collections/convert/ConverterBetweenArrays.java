@@ -1,4 +1,4 @@
-package org.pablos.learn.collections;
+package org.pablos.learn.collections.convert;
 
 import java.util.Arrays;
 import java.util.List;
