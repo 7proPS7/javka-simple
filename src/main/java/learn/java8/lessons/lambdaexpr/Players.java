@@ -1,7 +1,7 @@
-package learn.java8.lessons;
+package learn.java8.lessons.lambdaexpr;
 
-import static learn.java8.lessons.StrengthShotType.STRONG;
-import static learn.java8.lessons.StrengthShotType.WEAK;
+import static learn.java8.lessons.lambdaexpr.StrengthShotType.STRONG;
+import static learn.java8.lessons.lambdaexpr.StrengthShotType.WEAK;
 
 class Players {
     void shotStrength(Player player) {
