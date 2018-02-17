@@ -1,4 +1,4 @@
-package learn.java8.lessons;
+package learn.java8.lessons.lambdaexpr;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -10,8 +10,8 @@ import org.mockito.Spy;
 
 import java.util.Arrays;
 
-import static learn.java8.lessons.StrengthShotType.STRONG;
-import static learn.java8.lessons.StrengthShotType.WEAK;
+import static learn.java8.lessons.lambdaexpr.StrengthShotType.STRONG;
+import static learn.java8.lessons.lambdaexpr.StrengthShotType.WEAK;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.MockitoAnnotations.initMocks;

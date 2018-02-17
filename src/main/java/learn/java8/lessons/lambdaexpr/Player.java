@@ -1,4 +1,4 @@
-package learn.java8.lessons;
+package learn.java8.lessons.lambdaexpr;
 
 class Player {
     private String firstname;
