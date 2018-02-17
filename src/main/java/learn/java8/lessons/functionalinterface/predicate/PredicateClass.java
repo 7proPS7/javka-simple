@@ -18,5 +18,6 @@ public class PredicateClass {
     public void calculateGameValue(Game game) {
         input.getGameName().filter(this::isNotEmpty).ifPresent(game::setName);
         input.getGameAuthor().filter(this::isNotEmpty).ifPresent(game::setAuthor);
+        input.getGameDescription().filter(this::isNotEmpty).ifPresent(game::setDescription);
     }
 }
