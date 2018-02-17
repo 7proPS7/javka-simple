@@ -19,5 +19,6 @@ public class PredicateClass {
         input.getGameName().filter(this::isNotEmpty).ifPresent(game::setName);
         input.getGameAuthor().filter(this::isNotEmpty).ifPresent(game::setAuthor);
         input.getGameDescription().filter(this::isNotEmpty).ifPresent(game::setDescription);
+        input.getGameLanguage().filter(this::isNotEmpty).ifPresent(game::setLanguage);
     }
 }

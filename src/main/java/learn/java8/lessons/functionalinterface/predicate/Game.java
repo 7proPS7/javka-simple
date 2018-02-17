@@ -4,6 +4,7 @@ public class Game {
     private String name;
     private String author;
     private String description;
+    private String language;
 
     public String getName() {
         return name;
@@ -27,5 +28,13 @@ public class Game {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 }
