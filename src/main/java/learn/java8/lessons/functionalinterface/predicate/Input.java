@@ -8,4 +8,6 @@ public interface Input {
     Optional<String> getGameAuthor();
 
     Optional<String> getGameDescription();
+
+    Optional<String> getGameLanguage();
 }
