@@ -1,5 +1,6 @@
 package learn.java8.lessons.functionalinterface.predicate;
 
+import learn.java8.lessons.functionalinterface.Input;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

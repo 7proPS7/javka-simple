@@ -1,4 +1,4 @@
-package learn.java8.lessons.functionalinterface.predicate;
+package learn.java8.lessons.functionalinterface;
 
 import java.util.Optional;
 
@@ -10,4 +10,6 @@ public interface Input {
     Optional<String> getGameDescription();
 
     Optional<String> getGameLanguage();
+
+    Optional<String> getPersonPesel();
 }
