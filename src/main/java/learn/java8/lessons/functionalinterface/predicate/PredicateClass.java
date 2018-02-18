@@ -1,11 +1,12 @@
 package learn.java8.lessons.functionalinterface.predicate;
 
+import learn.java8.lessons.functionalinterface.Input;
+
 import java.util.function.Predicate;
 
 public class PredicateClass {
+    private final Predicate<String> notEmpty = in -> !in.isEmpty();
     private final Input input;
-
-    private Predicate<String> notEmpty = in -> !in.isEmpty();
 
     public PredicateClass(Input input) {
         this.input = input;
