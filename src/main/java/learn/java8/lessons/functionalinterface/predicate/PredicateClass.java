@@ -5,14 +5,14 @@ import java.util.function.Predicate;
 public class PredicateClass {
     private final Input input;
 
-    private Predicate<String> empty = String::isEmpty;
+    private Predicate<String> notEmpty = in -> !in.isEmpty();
 
     public PredicateClass(Input input) {
         this.input = input;
     }
 
     private boolean isNotEmpty(String input) {
-        return !empty.test(input);
+        return notEmpty.test(input);
     }
 
     public void calculateGameValue(Game game) {
